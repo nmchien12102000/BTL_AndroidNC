@@ -230,13 +230,13 @@ public class MainActivity extends AppCompatActivity implements Runnable {
                         }
 
                         //set vị trí cho vũ khí
-                        float clickX=event.getX();
-                        float clickY=event.getY();
+                        float clickX=event.getX()*3;
+                        float clickY=event.getY()*3;
                         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                                 RelativeLayout.LayoutParams.WRAP_CONTENT
                         );
-                        params.setMargins(pxToDp(clickX*2-img_vk.getWidth()),pxToDp(clickY*2-img_vk.getHeight()),0,0);
+                        params.setMargins(pxToDp(clickX-img_vk.getWidth()),pxToDp(clickY-img_vk.getHeight()),0,0);
                         img_vk.setLayoutParams(params);
                         img_vk2.setLayoutParams(params);
                         img_vk.setVisibility(View.VISIBLE);
